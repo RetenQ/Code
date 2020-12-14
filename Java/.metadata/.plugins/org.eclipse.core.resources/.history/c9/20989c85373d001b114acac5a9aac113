@@ -1,0 +1,97 @@
+package lab1213;
+
+public class task1 {
+
+	public static void main(String[] args) {
+		String S1="1022473578476949426110832338899437170338449409627474102214022150928";
+		//Create a String to save the data and we will count frequency of occurrence of number by it		
+		int len=S1.length();
+		//get the length of s1 and we can find the size of a array by it
+		
+		char[] S=new char [len];
+		//create a char array
+		
+		for(int c=0;c<S1.length();c++)
+		{
+			S[c]=S1.charAt(c);
+		}
+		
+		int [] A=new int [10];
+		for(int a=0;a<S1.length();a++)
+		{
+			if(S[a]=='0')
+			{
+				A[0]=A[0]+1;
+			}
+			if(S[a]=='1')
+			{
+				A[1]=A[1]+1;
+			}
+			if(S[a]=='2')
+			{
+				A[2]=A[2]+1;
+			}
+			if(S[a]=='3')
+			{
+				A[3]=A[3]+1;
+			}
+			if(S[a]=='4')
+			{
+				A[4]=A[4]+1;
+			}
+			if(S[a]=='5')
+			{
+				A[5]=A[5]+1;
+			}
+			if(S[a]=='6')
+			{
+				A[6]=A[6]+1;
+			}
+			if(S[a]=='7')
+			{
+				A[7]=A[7]+1;
+			}
+			if(S[a]=='8')
+			{
+				A[8]=A[8]+1;
+			}
+			if(S[a]=='9')
+			{
+				A[9]=A[9]+1;
+			}
+			}
+			
+			int biggest =0;
+			
+			for (int i=1; i<10; i++)
+			{
+			if (A[i] > biggest)
+			{
+			biggest = A[i];
+			
+			}
+			
+			}
+			for(x=biggest;x>0;x--)
+			{
+				for(int y=0;y<10;y++)
+				{
+					if(A[y]>=x)
+					{
+						System.out.print("["+y+"]  ");
+					}
+					else
+					{
+						System.out.print("     ");
+					}
+					
+					if(y==9)
+					
+						
+			System.out.println();
+			 }
+
+		}
+	}
+
+}

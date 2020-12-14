@@ -1,0 +1,22 @@
+package workIn1108;
+
+public class ChessBoardColour {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ChessBoardColour cbc = new ChessBoardColour();
+		cbc.checkColour('f',1);
+		cbc.checkColour('G',7);
+		cbc.checkColour('j',1);
+	}
+     
+	private void checkColour (char letter,int number) {
+	    if(letter == 'f' & number == 1) {
+			System.out.println("Light");
+	    }else if(letter == 'G' & number == 7) {
+			System.out.println("Dark");
+	    } else 
+	     System.out.println("Wrong Code!"); 
+	}
+
+}

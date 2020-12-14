@@ -1,0 +1,40 @@
+package workIn20201031;
+
+public class EasterSunday {
+
+	public static void main(String[] args) {
+		
+		double y = 2020 ;
+		//STEP1
+		double s1 = y %19 ;
+		//STEP2
+		double  s2_1 = y / 100 ;
+		double  s2_2 = y % 100 ; 
+		//STEP3
+		double s3_1 = s2_1 / 4 ;
+		double s3_2 = s2_1 % 4 ;
+		//STEP4
+		double s4 = (s2_1 * 8 + 13) /25 ;
+		//STEP5 
+		double s5 = (s1 * 19 +s2_1-s3_1-s4 +15)%30 ; 
+		//STEP6 
+		double s6_1 = s2_2 /4 ; 
+		double s6_2 = s2_2 %4 ;
+		//STEP7
+		double s7 =(s1+11*s5)/319 ;
+		//STEP8
+		double s8 = (s3_2 /2 + 2*s6_1 - s6_2 + s5+s7 +32)%7 ;
+	    //STEP9
+        double s9 = (s5 -s7 +s8 + 90)/25 ; 
+		//STEP10	
+        double s10 = (s5 -s7 + s8 +s9 +19)%32 ;
+        
+        //FINAL
+        double day = s10;
+        double mon = s9 ; 
+        
+		System.out.println("The EasterSunday of 2020 is"+mon+"Month"+day+"Day");
+		
+	}
+
+}

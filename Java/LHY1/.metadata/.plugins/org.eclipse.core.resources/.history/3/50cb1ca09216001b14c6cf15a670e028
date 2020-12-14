@@ -1,0 +1,13 @@
+
+public class SalePrediction {
+
+	public static void main(String[] args) {
+     double x_ = (230.1+44.5+17.2+151+5+180.8+8.7+57.5+120.2+8.6+199.8)/10.0;
+     System.out.println("x_ ="+x_);
+     
+     double y_=(2201+10.4+9.3+18.5+12.9+7.2+11.8+13.2+4.8+10.6)/10.0;
+     System.out.println("y_ ="+y_);
+
+	}
+
+}
