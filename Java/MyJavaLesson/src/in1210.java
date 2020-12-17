@@ -130,7 +130,9 @@ public class in1210 {
 			
 			//附：获得随机数（先打上import java.util.Random;）
 			Random randomGenerator = new Random() ;
-			int randomInt = randomGenerator.nextInt(10);//在0-10间随机产生随机数
+			int randomInt = randomGenerator.nextInt(11);//在0-10间随机产生随机数
+			//
+			//该方法的作用是生成一个随机的int值，该值介于[0,n)的区间，也就是0到n之间的随机int值，包含0而不包含n
 			
 	//i++和++i的不同  （--同理）
 			int i = 5;

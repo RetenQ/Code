@@ -40,6 +40,7 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\RetenQ\Desktop\JAVA课件\lecture13\lecture13"/>
 			<item value="C:\Users\RetenQ\Desktop\JAVA课件\lecture12\lecture12"/>
 			<item value="C:\Users\RetenQ\Desktop\JAVA课件\20.12.03\lecture11\lecture11"/>
 			<item value="C:\Users\RetenQ\Desktop\JAVA课件\lecture10\lecture10"/>
