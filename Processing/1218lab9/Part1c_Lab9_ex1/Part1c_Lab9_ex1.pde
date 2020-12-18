@@ -1,7 +1,10 @@
+//832003314 兰弘羿        MU 20122756LanHongyi
+
 import controlP5.*;
 import ddf.minim.*;
 import ddf.minim.ugens.*;
 
+//Declare
 Minim minim;
 AudioOutput out;
 Oscil       wave, mod;
@@ -20,8 +23,7 @@ void setup() {
   wave = new Oscil( 440, 0.8f, Waves.TRIANGLE);
   mod = new Oscil( 2, 0.8f, Waves.SINE);
   
-  // add a horizontal slider, the value of this slider will be linked
-  // to variable 'Osc1' in the function below draw() 
+//Set toggle1 "Osc1"
   os1=cp5.addSlider("Osc1")
      .setPosition(50,30)
      .setRange(100,1000)
@@ -39,7 +41,7 @@ void setup() {
      .setMode(ControlP5.SWITCH)
      ;
     
- //os2 LFO   
+ //Set os2 LFO   
      os2=cp5.addSlider("LFO")
     .setPosition(50,130)
     .setRange(0,10)
@@ -90,14 +92,15 @@ void Osc1toggle2(boolean theFlag) {
   }
 }
 
+//Add the judging for LFO
     void LFO(float freq) {
     mod.setFrequency(freq);
     }
     
     void LFOtoggle(boolean flag) {
     if(flag==true) {
-    mod.patch(wave.amplitude); //connect the modulator to the wave i.e.,
-    } else { //turn on Amplitude Modulation
-    mod.unpatch(wave); //disconnect the modulator from the wave i.e.,
-    } //turn off amplitude modulation
+    mod.patch(wave.amplitude); 
+    } else { 
+    mod.unpatch(wave); 
+    } 
     }

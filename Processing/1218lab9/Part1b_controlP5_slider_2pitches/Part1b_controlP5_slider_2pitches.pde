@@ -1,27 +1,32 @@
+//832003314 兰弘羿        MU 20122756LanHongyi
+
 import controlP5.*;
 import ddf.minim.*;
 import ddf.minim.ugens.*;
 
+//Declare everything we need
 Minim minim;
 AudioOutput out;
 Oscil wave1,wave2;
-
-
 ControlP5 cp5;
-int myColorBackground = color(0,0,0);
-int myColor = color(100);
-float fund,detune;
 Frequency currF1, currF2;
 Summer sum;
 
-void setup() {
-size(220,300);
-cp5 = new ControlP5(this);
+int myColorBackground = color(0,0,0);
+int myColor = color(100);
+float fund,detune;
 
-minim = new Minim(this);
-  // use the getLineOut method of the Minim object to get an AudioOutput object
+
+void setup() {
+  //Set the music,toggle,and"wave"
+  
+  size (220,300);
+  cp5 = new ControlP5(this);
+  
+  minim = new Minim(this);
   out = minim.getLineOut();
   sum = new Summer();
+  
   currF1=Frequency.ofPitch("A4");
   currF2=Frequency.ofPitch("A4");
   
@@ -30,7 +35,8 @@ minim = new Minim(this);
 
   sum.patch(out);
 
-cp5.addSlider("Osc1")
+//Create the Toggles 
+    cp5.addSlider("Osc1")
      .setPosition(50,50)
      .setSize(10,100)
      .setRange(0,10)
@@ -38,22 +44,22 @@ cp5.addSlider("Osc1")
      .setNumberOfTickMarks(5) 
      ;
      
-cp5.addToggle("Osc1tog")
+    cp5.addToggle("Osc1tog")
      .setPosition(50,200)
      .setSize(50,20)
      .setValue(true)
      .setMode(ControlP5.SWITCH)
      ; 
-
-cp5.addSlider("Osc2")
+    
+    cp5.addSlider("Osc2")
      .setPosition(150,50)
      .setSize(10,100)
      .setRange(0,10)
      .setValue(0)
      .setNumberOfTickMarks(5) 
      ;
-
-  cp5.addToggle("Osc2tog")
+    
+    cp5.addToggle("Osc2tog")
      .setPosition(150,200)
      .setSize(50,20)
      .setValue(true)
@@ -63,12 +69,15 @@ cp5.addSlider("Osc2")
 }
 
 void draw() {
+  //Draw the background
   fill(myColorBackground);
   rect(0,0,width,180);
   fill(myColor);
   rect(0,180,width,120);
 }
 
+
+//Judge which music we need to play by the height and where the mouse is
 void Osc1(float v) {
   if(v==0.0f){
     currF1 = Frequency.ofPitch( "A4" );
@@ -90,6 +99,7 @@ void Osc1(float v) {
   } 
 }
 
+//Judge the turn on or turn off
 void Osc1tog(boolean flag) {
   if(flag==true) {
     wave1.unpatch(sum);  //turn off wave1
@@ -97,6 +107,8 @@ void Osc1tog(boolean flag) {
     wave1.patch(sum);  //turn on wave1
   }
 }
+
+//Do same things to the second toggle
 void Osc2(float v) {
   if(v==0.0f){
     currF1 = Frequency.ofPitch( "A4" );
@@ -121,8 +133,8 @@ void Osc2(float v) {
 
 void Osc2tog(boolean flag2) {
     if(flag2==true) {
-    wave1.unpatch(sum);  //turn off wave1
+    wave1.unpatch(sum);  
   } else {
-    wave1.patch(sum);  //turn on wave1
-  }// turn on and off wave2 
+    wave1.patch(sum);  
+  }
 }
