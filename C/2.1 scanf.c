@@ -12,7 +12,7 @@ int main()
 	//每个%d和，后面的是对应的，如printf ("%d + %d = %d",a,b,a+b) 
 	//scanf 里面写的东西是它会读到的东西。并且输入的格式要和scanf里面的相同
 	//比如scanf("%d,%d") 你就要在运行时输入 2，3 。在scanf的格式字符串的东西，是之后要求你输入的东西 
-	// 极端点，如果scanf("price%d"，&a) 就需要在运行时输入 price 1 
+	// 极端点，如果scanf("price%d"，&a) 就需要在运行时输入 price1 
 	int change=100-price;
 	//定义了第二个变量，并且还做了计算 
 	//100是常量，为了方便修改的话我们也可以给常量整一个名字 const int AMOUNT= 100即可 
