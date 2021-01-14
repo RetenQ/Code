@@ -1,0 +1,9 @@
+
+public class SalePrediction {
+
+	public static void main(String[] args) {
+     double x_ = (230.1+44.5+17.2+151+5+180.8+8.7+57.5+120.2+8.6+199.8)/10.0;
+     System.out.println("x_ ="+x_);
+	}
+
+}

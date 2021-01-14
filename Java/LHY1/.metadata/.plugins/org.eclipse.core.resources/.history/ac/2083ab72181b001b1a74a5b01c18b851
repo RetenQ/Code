@@ -1,0 +1,36 @@
+package workIn20201031;
+
+public class VolumeCalculator {
+
+	public static void main(String[] args) {
+		
+		double h,r,r2,r3; 
+		double v1,v2,v3,v4,v5,v ;
+		double pi = Math.PI ;  
+		//Setting
+		
+		h = 24.3293 ; 
+		r = 23.5 ;
+		r2 = Math.pow(r,2);
+		v1 = pi*r2*h;
+		System.out.println("V1 = "+v1);
+		
+		h = 31.0; 
+		r = 17.39 ;
+		r2 = Math.pow(r,2);
+		v3 = pi*r2*h;
+		System.out.println("V3 = "+v3);
+		
+		h = 11.9999 ; 
+		r = 4.39 ;
+		r2 = Math.pow(r,2);
+		v5 = pi*r2*h;
+		System.out.println("V5 = "+v5);
+		
+		
+		
+		
+		
+	}
+
+}

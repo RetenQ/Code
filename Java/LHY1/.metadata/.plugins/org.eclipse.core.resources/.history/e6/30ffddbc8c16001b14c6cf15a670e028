@@ -1,0 +1,11 @@
+
+public class UsingMod {
+
+	public static void main(String[] args) {
+
+		 int a =256;
+		 System.out.println("Number is : "+a);
+
+	}
+
+}

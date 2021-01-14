@@ -1,0 +1,26 @@
+package workIn1115;
+
+public class SquareSum {
+
+	public static void main(String[] args) {
+	int x =100;
+	int k1 = x;
+	int k2 = x; 
+	int sum = 0 ;
+	while(k1>1)
+	{
+	 if(k1%13 == 0) {
+		 
+		 sum=sum+k1;
+		 k1--;
+		 
+	 }	
+	 
+	}
+	System.out.println("The sum of all numbers divisible by 13 is "+sum);
+	 	
+		
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package workIn1108;
+
+public class ScheduleValidator {
+
+	public static void main(String[] args) {
+	
+		int a1s=1215;
+		int a1e=2030;
+		
+		String a_2= new String("0820");
+		int a2s = Integer.parseInt(a_2);
+		int a2e=1345;
+
+		if(a1e-a2s <0 & a2e - a1s<0)
+	       System.out.println("Perfect scheduled !");
+		else if(a1s<a2s)
+		   System.out.println("Appointment1 - Appointment2");
+		
+		else if(a2s<=a1s)
+			   System.out.println("Appointment2 - Appointment1");
+		else  System.out.println("ERROR");
+
+
+		
+	}
+
+}

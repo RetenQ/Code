@@ -1,0 +1,17 @@
+
+public class ArithmeticOperations {
+
+	public static void main(String[] args) {
+	    int num1 = 10,num2=5;
+	    int result1 =0, result2 =0;
+	    double result3 = 0;
+	    
+	    int result1 = num1+num2;
+	    
+	    
+	    
+		
+		
+	}
+
+}
